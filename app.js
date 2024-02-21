@@ -21,6 +21,11 @@ document.querySelectorAll(".nav__items").forEach((l) => {
 document
   .querySelector(".hamburger-icon")
   .addEventListener("click", function (e) {
-    console.log(e);
     document.querySelector(".nav__links ul").classList.toggle("visible");
   });
+
+document.querySelectorAll(".nav__items").forEach((item) =>
+  item.addEventListener("click", function (e) {
+    document.querySelector(".nav__links ul").classList.remove("visible");
+  })
+);

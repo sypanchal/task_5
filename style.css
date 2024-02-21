@@ -82,9 +82,10 @@ body {
   content: "";
   border-bottom: 2px solid var(--secondary-font-color);
   position: absolute;
-  width: 120%;
+  width: 110%;
   bottom: 0;
-  left: -10%;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
 }
 
@@ -573,6 +574,24 @@ body {
 .footer__items:visited {
   text-decoration: none;
   color: #fff;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.footer__items::after {
+  content: "";
+  border-bottom: 2px solid var(--secondary-font-color);
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  opacity: 0;
+}
+
+.footer__items:hover::after {
+  opacity: 1;
+  transition: 0.2s ease-in;
 }
 
 .footer__section-right {
@@ -792,6 +811,10 @@ body {
     font-size: 4rem;
   }
 
+  .client__logos .client {
+    width: 5rem;
+  }
+
   .service__cards {
     display: flex;
     align-items: center;
@@ -972,9 +995,12 @@ body {
     margin-top: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .client__logos .client {
+    width: 3.5rem;
   }
 
   .cta__section {
